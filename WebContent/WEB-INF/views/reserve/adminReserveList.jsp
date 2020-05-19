@@ -26,6 +26,7 @@
 	width: 1200px;
 	overflow: hidden;
 	margin: 0 auto;
+	margin-top:30px;
 }
 p{
 	display:inline-block;
@@ -36,6 +37,9 @@ p{
 	height: 50px;
 	background-color: #F5F5F5;
 	text-align: center;
+}
+.content1>.listtable{
+	background-color:#998778;
 }
 
 .list-wrapper {
@@ -101,6 +105,12 @@ p{
 	width: 100%;
 	font-size: 15px;
 	border: 1px solid lightgray;
+	border-radius : 5px;
+	box-sizing: border-box;
+}
+#selectStatus{
+	border: 1px solid lightgray;
+	border-radius : 5px;
 	box-sizing: border-box;
 }
 
@@ -388,6 +398,7 @@ p{
 						<option value="false">예약중</option>
 						<option value="true">방문함</option>
 					</select></th>
+					<th></th>
 				</tr>
 			</table>
 			<div class="list-wrapper">
