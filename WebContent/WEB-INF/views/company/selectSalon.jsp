@@ -13,6 +13,21 @@
 
 
 <style>
+/* 헤더 제대로적용------------------------ */
+.headermiddle input[type="text"] {
+	height: 24px;
+	margin-bottom: 10px;
+	padding: 0;
+}
+
+.homeIcon>img {
+	margin-top: 5px;
+}
+
+.headermiddle {
+	padding-top: 5px;
+}
+/* 헤더 제대로적용------------------------ */
 .content1 {
 	overflow: hidden;
 	margin: 130px auto;
@@ -336,12 +351,22 @@ text-align: center;
 				</div>
 				</div>
 			<div>
+			<c:if test="${sessionScope.member.memberId == 'admin' }">
+                <a href="javascript:void(0);" onclick="goToReserveFrm('${sessionScope.member.memberId}');">
+                <div class="sidemenu2">
+			<img src="/imgs/reserve-icon.png">
+			<div>예약관리</div>
+		</div>
+			</a>
+			</c:if>
+			<c:if test="${sessionScope.member.memberId != 'admin' }">
                 <a href="javascript:void(0);" onclick="goToReserveFrm('${sessionScope.member.memberId}');">
                 <div class="sidemenu2">
 			<img src="/imgs/reserve-icon.png">
 			<div>예약하기</div>
 		</div>
 			</a>
+			</c:if>
 			<a class="sidemenu1"href="/branchList?reqPage=1">
                 <div>◀목록으로</div></a>
             </div>
