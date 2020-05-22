@@ -203,6 +203,7 @@ function questionFunc(memberId){
             <c:if test="${sessionScope.member.memberId eq 'admin' }">
             <div align="right" style="margin-top: 120px;">
             	<a href="/modifyEventFrm?eventNo=${e.eventNo}" class="adminEventBtn">수정하기</a>
+            	
             	<a href="javascript:void(0)" class="adminEventBtn" onclick="deleteEvent('${e.eventNo}')">종료하기</a>
             </div>
             </c:if>
@@ -243,5 +244,6 @@ function deleteEvent() {
 		location.href="/eventDetail?eventNo=${e.eventNo}"
 	}
 };
+
 </script>
 </html>

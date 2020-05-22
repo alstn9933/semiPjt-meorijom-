@@ -74,4 +74,16 @@ public class EventService {
 		return result;
 	}
 
+	public int deleteEndEvent(int eventNo) {
+		Connection conn = JDBCTemplate.getConnection();
+		int result = new EventDao().deleteEndEvent(conn,eventNo);
+		if(result>0) {
+			JDBCTemplate.commit(conn);
+		}else {
+			JDBCTemplate.rollback(conn);
+		}
+		JDBCTemplate.close(conn);
+		return result;
+	}
+
 }

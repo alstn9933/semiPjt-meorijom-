@@ -481,8 +481,7 @@ th {
 							var modal = $("#modal-content");
 							modal.find("p").remove();
 							modal.find("img").remove();
-							modal
-									.append("<img src='../upload/designer/designer"+data[0].designerNo+".jpg' width='150' height='150'>");
+							modal.append("<img src='../upload/designer/"+data[0].designerFilepath+" width='150' height='150'>");
 							modal.append("<p> 디자이너 이름 : "
 									+ data[0].designerName + "</p>");
 							modal.append("<p> 예약자 이름 : " + data[0].memberName

@@ -255,6 +255,10 @@ function questionFunc(memberId){
             			${ee.eventTitle }
             		</div>
             		<div class="eventDate">
+            		<c:if test="${sessionScope.member.memberId eq 'admin' }">
+            			<a href="javascript:void(0)" onclick="deleteEndEvent('${ee.eventNo}')" style="display: inline-block; width: 50px; border-radius: 5px; background-color: red; text-align: center; margin-right: 10px; color: white; font-size: 16px;">삭제</a>
+            		</c:if>
+            		
             			<span style="display: inline-block; width: 50px; border-radius: 5px; background-color: rgba(140,140,140,0.8); text-align: center; margin-right: 10px; color: white; font-size: 16px;">종료</span>${ee.eventDate }
             		</div>
             	</div>
@@ -268,6 +272,14 @@ function questionFunc(memberId){
 		function eventTitle() {
 			alert("종료된 이벤트 입니다.");
 		}
+		
+		function deleteEndEvent(eventNo) {
+			if(confirm("종료하시겠습니까?")){
+				location.href="/deleteEndEvent?eventNo="+eventNo;
+			}else{
+				location.href="/eventEndPage"
+			}
+		};
 	</script>
 </body>
 </html>

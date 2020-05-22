@@ -184,4 +184,23 @@ public class EventDao {
 		return result;
 	}
 
+	public int deleteEndEvent(Connection conn, int eventNo) {
+		PreparedStatement pstmt = null;
+		int result = 0;
+		String query = "delete from end_event where event_no = ?";
+		try {
+			pstmt = conn.prepareStatement(query);
+			pstmt.setInt(1, eventNo);
+			result = pstmt.executeUpdate();
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			JDBCTemplate.close(pstmt);
+		}
+		
+		return result;
+	}
+
 }
