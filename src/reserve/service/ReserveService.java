@@ -103,9 +103,10 @@ public class ReserveService {
 				}
 			}
 			if(cnt==hairNo.length) {
-				result1+=cnt;
+				result1=cnt;
 				JDBCTemplate.commit(conn);
 			}else {
+				result1 = 0;
 				JDBCTemplate.rollback(conn);
 			}
 		}else {

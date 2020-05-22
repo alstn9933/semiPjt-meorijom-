@@ -53,7 +53,7 @@ public class InsertReserveServlet extends HttpServlet {
 		int result = new ReserveService().insertReserve(r,hairNo);		
 		
 		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reserve/succeccReserve.jsp");
-		if(result==hairNo.length+1) {
+		if(result==hairNo.length) {
 			request.setAttribute("msg", "예약완료");
 		}else {
 			request.setAttribute("msg", "예약실패");
