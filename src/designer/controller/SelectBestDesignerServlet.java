@@ -36,7 +36,6 @@ public class SelectBestDesignerServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Designer d = new DesignerService().selectBestDesigner();
-		
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");
 		new Gson().toJson(d,response.getWriter());

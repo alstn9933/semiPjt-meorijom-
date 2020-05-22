@@ -307,7 +307,7 @@ function fn_more(start){
 			  }
 		  },
 		  error : function(){
-			  console.log("실패");
+			  alert("에러");
 		  }
 	  })
 }

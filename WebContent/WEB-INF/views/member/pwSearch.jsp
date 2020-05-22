@@ -105,8 +105,6 @@
 			        });
 				 
 				 $("form").submit(function () {
-					 console.log(i);
-					 
 					 i = 0;
 						$("#pw").focusout();
 		                if(i>=2){

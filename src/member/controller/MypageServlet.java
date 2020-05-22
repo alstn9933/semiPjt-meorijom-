@@ -36,7 +36,6 @@ public class MypageServlet extends HttpServlet {
 		RequestDispatcher rd= request.getRequestDispatcher("/WEB-INF/views/member/mypage.jsp");
 		request.setAttribute("member", m);
 		rd.forward(request, response);
-		//request.getRequestDispatcher("/WEB-INF/views/member/mypage.jsp").forward(request, response);
 	}
 
 	/**

@@ -35,9 +35,6 @@ public class IdSearchServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String memberName=request.getParameter("memberName");
 		String memberPhone=request.getParameter("memberPhone");
-		
-		//System.out.println(memberName);
-		//System.out.println(memberPhone);
 		Member m= new MemberService().idSearch(memberName,memberPhone);
 		response.setContentType("application/json");
 		response.setCharacterEncoding("utf-8");

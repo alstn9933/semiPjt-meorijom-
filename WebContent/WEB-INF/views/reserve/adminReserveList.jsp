@@ -320,7 +320,7 @@ p{
 					$(".reserveList").html(html);
 				},
 				error : function(){
-					console.log("실패");
+					console.log("에러");
 				}
 			});
 		});
@@ -359,7 +359,7 @@ p{
 					}
 				},
 				error : function(data){
-					alert("실패");
+					alert("에러");
 				}
 			});
 		}

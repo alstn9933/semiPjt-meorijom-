@@ -98,14 +98,6 @@ small {
 	display: none;
 }
 
-/* .reserveok {
-	box-shadow: 5px 5px 5px grey;
-	margin: 0 auto;
-	margin-bottom: 10px;
-	padding: 30px;
-	width: 500px;
-	border-radius: 10px;
-} */
 .userInfo {
 	margin: 0 auto;
 	padding: 10px;
@@ -455,7 +447,7 @@ th {
 				</div>
 			</div>
 		</div>
-		<%-- 		<jsp:include page="/WEB-INF/views/common/footer.jsp" /> --%>
+
 	</div>
 	<script>
 		$('#exampleModal').on('show.bs.modal', function(event) {
@@ -469,11 +461,8 @@ th {
 		});
 
 		function reviewInsert(reserveNo, salonName, memberId) {
-			var param = {
-				reserveNo : reserveNo
-			};
-			$
-					.ajax({
+			var param = {reserveNo : reserveNo};
+			$.ajax({
 						url : "/reserveSearch",
 						data : param,
 						type : "get",
@@ -490,12 +479,6 @@ th {
 									+ data[0].menuList[0].hairName + "</p>");
 							modal.append("<p> 예약 가격 : " + data[0].totalPrice
 									+ "</p>");
-							/* modal.append("<p> 예약 번호 : " + data[0].reserveNo
-									+ "</p>");
-							modal.append("<p> 예약완료여부 : "
-									+ data[0].reserveStatus + "</p>"); */
-
-							/* 						modal.append("<input type='hidden' name='reserveNo' value='"+data[0].reserveNo+"'>"); */
 							$("#rating-ability-wrapper")
 									.append(
 											"<input type='hidden' name='reserveNo' value='"+data[0].reserveNo+"'>");
@@ -511,12 +494,10 @@ th {
 							$("#rating-ability-wrapper")
 									.append(
 											"<input type='hidden' name='number' value='1'>");
-							/* 						$("#rating-ability-wrapper").append("<input type='hidden' name='salonName' value='"+data[0].salonName+"'>"); */
-							/* 						$("#rating-ability-wrapper").append("<input type='hidden' name='salonName' value='"+userReserveList[0].salonName+"'>"); */
 
 						},
 						error : function() {
-							console.log('실패');
+							console.log('에러');
 						}
 					});
 		}
@@ -559,8 +540,7 @@ th {
 
 		}
 	</script>
-	<style>
-</style>
+
 	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 		aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog" role="document">
@@ -630,8 +610,6 @@ th {
 		</div>
 	</div>
 	<jsp:include page="/WEB-INF/views/common/footer.jsp" />
-<<<<<<< HEAD
-=======
 	<script>
 		$(function() {
 			$('.btn-secondary').click(function() {
@@ -645,7 +623,5 @@ th {
 		});
 
 	</script>
-
->>>>>>> 64f3da4e452295dce01c0e3e3561989f14e55e06
 </body>
 </html>

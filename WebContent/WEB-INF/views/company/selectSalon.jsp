@@ -524,7 +524,6 @@ text-align: center;
 			}
 			var result = response.result, // 검색 결과의 컨테이너
 			items = result.items;
-			console.log(items);
 			add = items[1].point;
 			xx = add.x;
 			yy = add.y;

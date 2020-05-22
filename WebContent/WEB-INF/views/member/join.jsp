@@ -185,7 +185,6 @@
 
            
            var genderNum=$("input:radio[name='gender']:checked").length;
-           console.log(genderNum);
            if(genderNum==0){
                comments[6].innerHTML="성별을 체크해주세요";
                count[5]=false;
@@ -202,7 +201,6 @@
                     num++;
                 }
             }
-            console.log(num);
             if(num==0){
                 return true;
             }else{

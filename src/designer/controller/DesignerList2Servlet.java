@@ -34,7 +34,6 @@ public class DesignerList2Servlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String salonName=request.getParameter("salonName");
-		//System.out.println(salonName); 됐음
 		ArrayList<Designer> list = new DesignerService().selectBySalon(salonName);
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");

@@ -199,7 +199,6 @@ public class ReserveDao {
 		try {
 			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, memberId);
-			System.out.println(memberId);
 			rset = pstmt.executeQuery();
 			while(rset.next()) {
 				Reserve r = new Reserve();
